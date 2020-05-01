@@ -52,12 +52,13 @@ class Timer(object):
             print('Elapsed: %s' % (time.time() - self.tstart))
 
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(description="Export tensorboard log file or directory of log files based on summary"
+                                             " data.")
 parser.add_argument("log", type=str, help="Location of log file or log directory containing logs.")
 parser.add_argument("out", type=str, help="Directory where log exports are stored.")
-parser.add_argument("-s", nargs="*", choices=summariesDefault, help="The remaining arguments will be parsed as a list"
-                                                                    "of summaries. Default is to include all possible"
-                                                                    "summaries: [scalars, histograms, images, audio,"
+parser.add_argument("-s", nargs="*", choices=summariesDefault, help="The remaining arguments will be parsed as a list "
+                                                                    "of summaries. Default is to include all possible "
+                                                                    "summaries: [scalars, histograms, images, audio, "
                                                                     "compressedHistograms].", default=summariesDefault)
 args = parser.parse_args()
 
