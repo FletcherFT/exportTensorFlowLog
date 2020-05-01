@@ -31,7 +31,7 @@ Export TensorFlow logs to common easy to read formats (csv-files, png-images, ..
 </tr>
 </table>
 
-Tested on TensorFlow version 0.11.0, 1.1.0 and 1.3.0 and Python 2.7 and 3.6.
+Tested on TensorFlow version 0.11.0, 1.1.0 and 1.3.0 and Python 3.7.
 
 ## Usage
 
